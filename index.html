@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Are You AI or Human?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🤖 Human-or-Agent Test</h1>
+      <p class="intro">
+        Convert the binary message into words before the timer ends. Get it right and
+        you're classified as an <strong>Agent</strong>; get it wrong and you're a
+        <strong>Human</strong>.
+      </p>
+
+      <section class="controls">
+        <label>
+          <input type="radio" name="mode" value="normal" checked />
+          Normal Mode (English)
+        </label>
+        <label>
+          <input type="radio" name="mode" value="hard" />
+          Hard Mode (Longer + Mandarin)
+        </label>
+      </section>
+
+      <section class="game-card">
+        <div class="status-row">
+          <p>Time left: <span id="time">15</span>s</p>
+          <button id="startBtn">Start Test</button>
+        </div>
+
+        <p class="label">Binary phrase:</p>
+        <pre id="binaryPhrase" class="binary">Press “Start Test” to begin.</pre>
+
+        <label class="label" for="answerInput">Decoded phrase:</label>
+        <input id="answerInput" type="text" placeholder="Type your decoded words here" disabled />
+
+        <div class="actions">
+          <button id="submitBtn" disabled>Submit</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+
+        <p id="result" class="result"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
